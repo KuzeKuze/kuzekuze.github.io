@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="generator" content="Hugo 0.70.0" />
+		<title>用hugo建立自己的博客 - My New Hugo Site</title>
+
+		<meta name="description" content="使用hugo建立属于自己的博客。
+第一步：建立站点 创建博客命令：
+$ hugo new site blog_path Congratulations! Your new Hugo site is created in C:\Users\xxx\xxx_blog. Just a few more steps and you&#39;re ready to go: 1. Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/ or create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command. 2. Perhaps you want to add some content. You can add single files with &#34;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;. 3. Start the built-in live server via &#34;hugo server&#34;.">
+
+
+		
+	
+		
+
+
+
+
+<link rel="stylesheet" href="/css/ui.css">
+
+	
+		
+
+		<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Raleway">
+
+		
+	</head>
+
+<body>
+<header class="container no-print">
+	<div class="u-header">
+		<nav class="bar">
+	<ul><li>
+			<a href="/">
+				<img class="icon-text" src="/img/prev.svg"/>
+			</a>
+		</li></ul>
+</nav>
+
+	</div>
+</header>
+<main class="container">
+
+<article>
+	<header><hgroup id="brand">
+	<h1>用hugo建立自己的博客</h1>
+	<h5>
+		
+		<time datetime="2020-05-15 00:10:50 &#43;0800 CST">May 15, 2020</time>
+		<span class="no-print">
+			<span>
+	</h5>
+	
+</hgroup>
+<hr class="sep" />
+</header>
+	<p>使用hugo建立属于自己的博客。</p>
+<h1 id="第一步建立站点">第一步：建立站点</h1>
+<p>创建博客命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hugo new site blog_path
+Congratulations! Your new Hugo site is created in C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\x</span>xx<span style="color:#ae81ff">\x</span>xx_blog.
+
+Just a few more steps and you<span style="color:#960050;background-color:#1e0010">&#39;</span>re ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the <span style="color:#e6db74">&#34;hugo new theme &lt;THEMENAME&gt;&#34;</span> command.
+2. Perhaps you want to add some content. You can add single files
+   with <span style="color:#e6db74">&#34;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;</span>.
+3. Start the built-in live server via <span style="color:#e6db74">&#34;hugo server&#34;</span>.
+
+Visit https://gohugo.io/ <span style="color:#66d9ef">for</span> quickstart guide and full documentation.
+</code></pre></div><p>执行该命令后会在<strong>blog_path</strong>路径下创建博客文件夹。我们查看一下该文件夹里的东西。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd blog_path
+$ ls -l
+total <span style="color:#ae81ff">1</span>
+drwxr-xr-x <span style="color:#ae81ff">1</span> xxx <span style="color:#ae81ff">197121</span>  <span style="color:#ae81ff">0</span> 五月   <span style="color:#ae81ff">14</span> 22:52 archetypes/
+-rw-r--r-- <span style="color:#ae81ff">1</span> xxx <span style="color:#ae81ff">197121</span> <span style="color:#ae81ff">82</span> 五月   <span style="color:#ae81ff">14</span> 22:52 config.toml
+drwxr-xr-x <span style="color:#ae81ff">1</span> xxx <span style="color:#ae81ff">197121</span>  <span style="color:#ae81ff">0</span> 五月   <span style="color:#ae81ff">14</span> 22:52 content/
+drwxr-xr-x <span style="color:#ae81ff">1</span> xxx <span style="color:#ae81ff">197121</span>  <span style="color:#ae81ff">0</span> 五月   <span style="color:#ae81ff">14</span> 22:52 data/
+drwxr-xr-x <span style="color:#ae81ff">1</span> xxx <span style="color:#ae81ff">197121</span>  <span style="color:#ae81ff">0</span> 五月   <span style="color:#ae81ff">14</span> 22:52 layouts/
+drwxr-xr-x <span style="color:#ae81ff">1</span> xxx <span style="color:#ae81ff">197121</span>  <span style="color:#ae81ff">0</span> 五月   <span style="color:#ae81ff">14</span> 22:52 static/
+drwxr-xr-x <span style="color:#ae81ff">1</span> xxx <span style="color:#ae81ff">197121</span>  <span style="color:#ae81ff">0</span> 五月   <span style="color:#ae81ff">14</span> 22:52 themes/
+
+</code></pre></div><h1 id="第二步添加主题">第二步：添加主题</h1>
+<p>我们已经建立好了博客，接下来设置主题。我们可以在<a href="https://themes.gohugo.io">themes</a>寻找自己喜欢的主题。</p>
+<p><img src="./pic/themes.png" alt="hugo的主题网站"></p>
+<p>每个主题下方会有安装该主题的教程。</p>
+<p><img src="./pic/install_themes.png" alt="安装主题的教程"></p>
+<p>我们按部就班的按照教程中的方法安装这个主题。注意主题一般提供了不同的方法应对不同的情况</p>
+<p>首先要确定自己在博客文件的根目录下。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd themes
+$ git clone https://github.com/marcanuy/simpleit-hugo-theme
+</code></pre></div><p>我们安装好主题后，先确保自己在博客的根目录下，而不是在themes目录下，在本地启动博客并查看(manis是主题的名称)：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hugo server -t manis --buildDrafts
+Building sites … WARN 2020/05/14 23:28:43 Page.Hugo is deprecated and will be removed in a future release. Use the global hugo <span style="color:#66d9ef">function</span>.
+
+                   | EN
+-------------------+-----
+  Pages            | <span style="color:#ae81ff">11</span>
+  Paginator pages  |  <span style="color:#ae81ff">0</span>
+  Non-page files   |  <span style="color:#ae81ff">0</span>
+  Static files     |  <span style="color:#ae81ff">7</span>
+  Processed images |  <span style="color:#ae81ff">0</span>
+  Aliases          |  <span style="color:#ae81ff">1</span>
+  Sitemaps         |  <span style="color:#ae81ff">1</span>
+  Cleaned          |  <span style="color:#ae81ff">0</span>
+
+Built in <span style="color:#ae81ff">71</span> ms
+Watching <span style="color:#66d9ef">for</span> changes in C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\d</span>uluomin<span style="color:#ae81ff">\m</span>yblog<span style="color:#ae81ff">\{</span>archetypes,content,data,layouts,static,themes<span style="color:#f92672">}</span>
+Watching <span style="color:#66d9ef">for</span> config changes in C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\d</span>uluomin<span style="color:#ae81ff">\m</span>yblog<span style="color:#ae81ff">\c</span>onfig.toml
+Environment: <span style="color:#e6db74">&#34;development&#34;</span>
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ <span style="color:#f92672">(</span>bind address 127.0.0.1<span style="color:#f92672">)</span>
+Press Ctrl+C to stop
+</code></pre></div><p>最后一行提示我们博客在本地地址的1313端口，我们通过浏览器访问一下。</p>
+<p><img src="./pic/local_blog.png" alt="blog预览"></p>
+<p>可以看到我们的博客站点已经搭建起来了。</p>
+<p>下一步我们新建文章，所以这里用<strong>ctrl+c</strong>退出一下。</p>
+<h1 id="第三步添加文章">第三步：添加文章</h1>
+<p>文章是markdown类型的。以下命令在博客根目录的<strong>content/post</strong>目录下建立一个.md笔记。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hugo new post/blog.md
+C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\d</span>uluomin<span style="color:#ae81ff">\m</span>yblog<span style="color:#ae81ff">\c</span>ontent<span style="color:#ae81ff">\p</span>ost<span style="color:#ae81ff">\b</span>log.md created
+</code></pre></div><p>接下来可以编辑<strong>blog.md</strong>内容。注意最开头的是标题。</p>
+<p><img src="./pic/markdown_code.png" alt="markdown"></p>
+<p>然后我们再次启动博客，可以看见我们的内容。</p>
+<p><img src="./pic/markdown.png" alt="markdown_blog"></p>
+<p>点击我们就可以看到博客内容。</p>
+<p><img src="./pic/markdown_content.png" alt="markdown_content"></p>
+<h1 id="第四步建立blog仓库">第四步：建立blog仓库</h1>
+<p>在github中建立一个仓库，仓库名字为你自己在github的id的小写加上**.github.io**，比如：</p>
+<p>我在github中的id为KuzeKuze，那么我的仓库名称应该是kuzekuze.github.io</p>
+<p><img src="./pic/github_rep_name.png" alt="github_name"></p>
+<p>你的仓库应该是一个空仓库，我的这个已经提交过一次了。</p>
+<p>仓库建立好了过后我们来进行部署。</p>
+<h1 id="第五步将个人博客部署到远端服务器">第五步：将个人博客部署到远端服务器</h1>
+<p>先确保自己在博客根目录下。键入以下命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo --theme<span style="color:#f92672">=</span>manis --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://kuzekuze.github.io/&#34;</span> --buildDrafts
+Building sites … WARN 2020/05/14 23:58:45 Page.Hugo is deprecated and will be removed in a future release. Use the global hugo <span style="color:#66d9ef">function</span>.
+
+                   | EN
+-------------------+-----
+  Pages            | <span style="color:#ae81ff">10</span>
+  Paginator pages  |  <span style="color:#ae81ff">0</span>
+  Non-page files   |  <span style="color:#ae81ff">0</span>
+  Static files     |  <span style="color:#ae81ff">7</span>
+  Processed images |  <span style="color:#ae81ff">0</span>
+  Aliases          |  <span style="color:#ae81ff">1</span>
+  Sitemaps         |  <span style="color:#ae81ff">1</span>
+  Cleaned          |  <span style="color:#ae81ff">0</span>
+
+Total in <span style="color:#ae81ff">93</span> ms
+</code></pre></div><p>此时会在博客根目录下生成一个public文件，我们现在要做的就是将这个文件夹的内容传到我们刚刚建立好的仓库中。我们首先将public文件夹初始化为本地仓库：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git init
+$ git add *
+$ git commit -m <span style="color:#e6db74">&#34;我的hugo第一次提交&#34;</span>
+</code></pre></div><p>接下来将这个仓库和远端的仓库进行关联。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote add origin https://github.com/KuzeKuze/kuzekuze.github.io
+</code></pre></div><p>我们现在将这个仓库推到远端：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git push
+</code></pre></div><p>这一步有可能会出错。</p>
+<p>接下来用仓库名称访问博客。</p>
+
+</article>
+<nav class="no-print post-nav">
+
+	<a class="prev-post" href="https://kuzekuze.github.io/post/blog/">
+		<img class="icon-text" src="/img/prev.svg"/>Markdown快速入门</a>
+
+
+</nav>
+
+
+
+
+
+			<hr class="sep" />
+		</main>
+		<footer class="container no-print">
+			<div class="u-footer">
+				
+
+
+<a href="https://kuzekuze.github.io/index.xml" target="_blank"><img class="icon-social" src="/img/feed.svg" alt="Feed"></a>
+
+				<p>
+					
+					Theme used: <a href="https://github.com/yursan9/manis-hugo-theme">Manis</a><br>
+					
+					
+					
+				</p>
+				
+				<a href="#brand">
+					<img class="icon-text" src="/img/toup.svg" alt="To Up"/>
+					<span>Back to Up</span>
+				</a>
+				
+			</div>
+		</footer>
+		
+	</body>
+</html>
+
